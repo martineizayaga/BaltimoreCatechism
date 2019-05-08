@@ -6,7 +6,9 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 // import SettingsScreen from '../screens/SettingsScreen';
-import PrayerScreen from '../screens/PrayerScreen'
+import PrayerScreen from '../screens/PrayerScreen';
+import PrayerNavigator from './PrayerNavigator';
+import TheLordsPrayer from '../prayers/TheLordsPrayer';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -41,7 +43,8 @@ LinksStack.navigationOptions = {
 };
 
 const PrayerStack = createStackNavigator({
-  Settings: PrayerScreen,
+  Prayers: PrayerScreen,
+  TheLordsPrayer: TheLordsPrayer
 });
 
 PrayerStack.navigationOptions = {

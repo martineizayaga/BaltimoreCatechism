@@ -36,6 +36,8 @@ export default class PrayerScreen extends React.Component {
             <ListItem
               key={i}
               title={item.title}
+              chevron={true}
+              onPress={() => this.props.navigation.navigate('TheLordsPrayer')}
             />
           ))
         }
