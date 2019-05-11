@@ -13,9 +13,9 @@ export default class OnePrayerScreen extends React.Component {
         const body = navigation.getParam('body')
         return (
             <ScrollView style={styles.container}>
-                <View>
-                    <Text h1>{title}</Text>
-                    <Text>{body}</Text>
+                <View style={styles.prayer_container}>
+                    <Text h3>{title}</Text>
+                    <Text style={styles.body}>{body}</Text>
                 </View>
             </ScrollView>
         );
@@ -28,4 +28,11 @@ const styles = StyleSheet.create({
         paddingTop: 15,
         backgroundColor: '#fff',
     },
+    prayer_container: {
+        justifyContent: 'center',
+        marginHorizontal: 10
+    },
+    body: {
+        marginTop: "2%"
+    }
 });
