@@ -4,9 +4,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import ListOfPrayersScreen from '../screens/ListOfPrayersScreen';
-import PrayerNavigator from './PrayerNavigator';
-import OnePrayerScreen from '../prayers/OnePrayerScreen';
+import PrayerStack from './PrayerStack';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -25,11 +23,6 @@ HomeStack.navigationOptions = {
     />
   ),
 };
-
-const PrayerStack = createStackNavigator({
-  ListOfPrayersScreen: ListOfPrayersScreen,
-  OnePrayerScreen: OnePrayerScreen
-});
 
 PrayerStack.navigationOptions = {
   tabBarLabel: 'Prayers',
