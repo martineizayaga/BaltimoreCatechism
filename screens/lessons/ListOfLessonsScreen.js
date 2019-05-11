@@ -4,63 +4,69 @@ import { ListItem } from 'react-native-elements';
 
 const list = [
   {
-    title: "The Lord's Prayer",
-    body: "Our Father, who art in heaven, hallowed be Thy name: Thy kingdom come; Thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us: and lead us not into temptation, but deliver us from evil. Amen."
+    title: "Lesson First",
+    subtitle: "On the End of Man"
   },
   {
-    title: "The Angelical Salutation",
-    body: "Hail Mary, full of grace! the Lord is with thee: blessed art thou amongst women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+    title: "Lesson Second",
+    subtitle: "On God and His Perfections"
   },
   {
-    title: "The Apostle's Creed",
-    body: "I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified: died, and was buried. He descended into hell: the third day He arose again from the dead: He ascended into heaven, sitteth at the right hand of God, the Father Almighty; from thence He shall come to judge the living and the dead. I believe in the Holy Ghost the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen."
+    title: "Lesson Third",
+    subtitle: "On the Unity and Trinity of God"
   },
   {
-    title: "The Confiteor",
-    body: `I confess to Almighty God, to blessed Mary, ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, and to all the Saints, that I have sinned exceedingly in thought, word and deed, through my fault, through my fault, through my most grievous fault. Therefore, I beseech blessed Mary, ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, and all the Saints, to pray to the Lord our God for me.
+    title: "Lesson Fourth",
+    subtitle: "On the Angels and Our First Parents"
+  }
+]
 
-May the Almighty God have mercy on me, and forgive me my sins, and bring me to everlasting life. Amen.
-
-May the Almighty and merciful Lord grant me pardon, absolution, and remission of all my sins. Amen.`
+const first_lesson = [
+  {
+    number: 1,
+    question: "Who made the world?",
+    answer: "God made the world."
   },
   {
-    title: "An Act of Faith",
-    body: "O my God! I firmly believe that Thou art one God in three Divine Persons, Father, Son, and Holy Ghost; I believe that Thy Divine Son became man, and died for our sins, and that he will come to judge the living and the dead. I believe these and all the truths which the Holy Catholic Church teaches, because Thou hast revealed them, who canst neither deceive nor be deceived."
+    number: 2,
+    question: "Who is God?",
+    answer: "God is the creator of heaven and earth, and of all things"
   },
   {
-    title: "An Act of Hope",
-    body: "O my God! relying on Thy infinite goodness and promises, I hope to obtain pardon of my sins, the help of Thy grace, and life everlasting, through the merits of Jesus Christ, my Lord and Redeemer."
+    number: 3,
+    question: "What is man?",
+    answer: "Man is a creature composed of body and soul, and made to the image and likeness of God."
   },
   {
-    title: "An Act Of Love",
-    body: "O my God! I love Thee above all things, with my whole heart and soul, because Thou art all-good and worthy of all love. I love my neighbor as myself for the love of Thee. I forgive all who have injured me, and ask pardon of all whom I have injured."
+    number: 4,
+    question: "Why did God make you?",
+    answer: "God made me to know Him, to love Him, and to serve Him in this world, and to be happy with Him forever in the next."
   },
   {
-    title: "An Act Of Contrition",
-    body: "O my God! I am heartily sorry for having offended Thee, and I detest all my sins, because I dread the loss of heaven and the pains of hell, but most of all because they offend Thee, my God, who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life."
+    number: 5,
+    question: "What must we do to save our souls?",
+    answer: "To save our souls, we must worship God by faith, hope, and charity; that is, we must believe in Him, hope in Him, and love Him with all our heart."
   },
   {
-    title: "The Blessing Before Meals",
-    body: "+ Bless us, O Lord! and these Thy gifts, which we are about to receive from Thy bounty, through Christ our Lord. Amen."
+    number: 6,
+    question: "How shall we know the things which we are to believe?",
+    answer: "We shall know the things which we are to believe from the Catholic Church, through which God speaks to us."
   },
   {
-    title: "Grace After Meals",
-    body: "+ We give Thee thanks for all Thy benefits, O Almighty God, who livest and reignest forever, and may the souls of the faithful departed through the mercy of God, rest in peace. Amen."
+    number: 7,
+    question: "Where shall we find the chief truths which the Church teaches?",
+    answer: "We shall find the chief truths which the Church teaches in the Apostles' Creed."
   },
   {
-    title: "The Manner in Which a Lay Person Is to Baptize in Case of Necessity",
-    body: `Pour common water on the head or face of the person to be baptized, and say while pouring it:
-
-"I baptize thee in the name of the Father, and of the Son, and of the Holy Ghost."
-
-N.B. Any person of either sex who has reached the use of reason can baptize in case of necessity, but the same person must say the words while pouring the water.`
-
+    number: 8,
+    question: "Say the Apostles' Creed",
+    answer: "I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary, suffered under Pontius Pilate, was crucified; died, and was buried. He descended into hell: the third day He arose again from the dead: He ascended into heaven, and sitteth at the right hand of God, the Father Almighty; from thence He shall come to judge the living and the dead. I believe in the Holy Ghost, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen."
   }
 ]
 
 export default class ListOfLessonsScreen extends React.Component {
   static navigationOptions = {
-    title: 'Prayers',
+    title: 'Lessons',
   };
 
   render() {
@@ -71,8 +77,10 @@ export default class ListOfLessonsScreen extends React.Component {
             <ListItem
               key={i}
               title={item.title}
+              subtitle={item.subtitle}
+              bottomDivider={true}
               chevron={true}
-              onPress={() => this.props.navigation.navigate('OnePrayerScreen', item)}
+              onPress={() => this.props.navigation.navigate('OneLessonScreen', {first_lesson: first_lesson})}
             />
           ))
         }
