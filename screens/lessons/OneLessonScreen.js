@@ -5,15 +5,19 @@ import { ListItem, Text } from 'react-native-elements';
 
 
 export default class OneLessonScreen extends React.Component {
-    
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: navigation.getParam('title'),
+        }
+    };
 
     render() {
         const { navigation } = this.props;
-        const first_lesson = navigation.getParam('first_lesson')
+        const lessons = navigation.getParam('lessons')
         return (
             <ScrollView style={styles.container}>
                 {
-                  first_lesson.map((item, i) => (
+                  lessons.map((item, i) => (
                     <View key={item.number}>
                         <Text style={styles.question} h4>{ item.question }</Text>
                         <Text style={styles.answer}>{ item.answer }</Text>

@@ -21,7 +21,7 @@ const list = [
   }
 ]
 
-const first_lesson = [
+const lessons = [
   {
     number: 1,
     question: "Who made the world?",
@@ -80,7 +80,10 @@ export default class ListOfLessonsScreen extends React.Component {
               subtitle={item.subtitle}
               bottomDivider={true}
               chevron={true}
-              onPress={() => this.props.navigation.navigate('OneLessonScreen', {first_lesson: first_lesson})}
+              onPress={() => this.props.navigation.navigate('OneLessonScreen', {
+                  lessons: lessons,
+                  title: item.title
+                })}
             />
           ))
         }
