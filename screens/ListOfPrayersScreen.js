@@ -41,8 +41,9 @@ export default class ListOfPrayersScreen extends React.Component {
           list.map((item, i) => (
             <ListItem
               key={i}
+              title={item.title}
               chevron={true}
-              onPress={() => this.props.navigation.navigate('OnePrayerScreen', list[i])}
+              onPress={() => this.props.navigation.navigate('OnePrayerScreen', item)}
             />
           ))
         }
