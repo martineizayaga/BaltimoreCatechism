@@ -40,7 +40,7 @@ May the Almighty and merciful Lord grant me pardon, absolution, and remission of
     body: "O my God! I am heartily sorry for having offended Thee, and I detest all my sins, because I dread the loss of heaven and the pains of hell, but most of all because they offend Thee, my God, who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life."
   },
   {
-    title: "The Blessings Before Meals",
+    title: "The Blessing Before Meals",
     body: "+ Bless us, O Lord! and these Thy gifts, which we are about to receive from Thy bounty, through Christ our Lord. Amen."
   },
   {
