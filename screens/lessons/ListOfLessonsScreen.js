@@ -9,7 +9,8 @@ const list = [
     art: {
       file_name: "LessonFirst.jpg",
       title: "The Creation of Adam",
-      artist: "Michelangelo"
+      artist: "Michelangelo",
+      styleName: "large-ultra-wide"
     }
   },
   {
