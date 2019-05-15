@@ -15,11 +15,14 @@ export default class OneLessonScreen extends React.Component {
     render() {
         const { navigation } = this.props;
         const lessons = navigation.getParam('lessons')
+        const art = navigation.getParam('art')
+
+        const image_background_source = '../../assets/images/lessons/' + art.file_name
         return (
             <ScrollView style={styles.container}>
                 <ImageBackground
-                    styleName="featured"
-                    source={ require('../../assets/images/lessons/LessonFirst.jpg') }
+                    styleName="large-ultra-wide"
+                    source={ require(image_background_source) }
                 >
                     <Tile>
                         <Overlay>

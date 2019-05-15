@@ -5,7 +5,12 @@ import { ListItem } from 'react-native-elements';
 const list = [
   {
     title: "Lesson First",
-    subtitle: "On the End of Man"
+    subtitle: "On the End of Man",
+    art: {
+      file_name: "LessonFirst.jpg",
+      title: "The Creation of Adam",
+      artist: "Michelangelo"
+    }
   },
   {
     title: "Lesson Second",
@@ -82,7 +87,9 @@ export default class ListOfLessonsScreen extends React.Component {
               chevron={true}
               onPress={() => this.props.navigation.navigate('OneLessonScreen', {
                   lessons: lessons,
-                  title: item.title
+                  title: item.title,
+                  subtitle: item.subtitle,
+                  art: item.art
                 })}
             />
           ))
