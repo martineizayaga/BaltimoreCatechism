@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { ListItem, Text, Card } from 'react-native-elements';
-import { Spinner } from '@shoutem/ui';
+import { ImageBackground, Title, Overlay, Caption, Tile } from '@shoutem/ui';
 
 
 
@@ -17,6 +17,17 @@ export default class OneLessonScreen extends React.Component {
         const lessons = navigation.getParam('lessons')
         return (
             <ScrollView style={styles.container}>
+                <ImageBackground
+                    styleName="featured"
+                    source={ require('../../assets/images/lessons/LessonFirst.jpg') }
+                >
+                    <Tile>
+                        <Overlay>
+                            <Text styleName="md-gutter-bottom">Lesson First</Text>
+                            <Text>On the End Of Man</Text>
+                        </Overlay>
+                    </Tile>
+                </ImageBackground>
                 {
                   lessons.map((item, i) => (
                     <Card key={item.number}>
