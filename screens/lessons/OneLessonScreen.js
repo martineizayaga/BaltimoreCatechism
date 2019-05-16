@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { ListItem, Text, Card } from 'react-native-elements';
 import { ImageBackground, Title, Overlay, Caption, Tile } from '@shoutem/ui';
-
+import { lessonImageSources } from '../../assets/images/lessons/sources';
 
 
 export default class OneLessonScreen extends React.Component {
@@ -14,27 +14,27 @@ export default class OneLessonScreen extends React.Component {
 
     render() {
         const { navigation } = this.props;
-        const lessons = navigation.getParam('lessons')
-        const art = navigation.getParam('art')
+        const lesson = navigation.getParam('lesson')
+        const questions = lesson.questions
+        const art = lesson.art
 
-        console.log('art.file_name', art.file_name)
-        var image_background_source = '../../assets/images'
-        // const image_background_source = require('../../assets/images/lessons/' + art.file_name)
+        var image_background_source = lessonImageSources[art.file_name]
+
         return (
             <ScrollView style={styles.container}>
                 <ImageBackground
                     styleName={art.styleName}
-                    source={ require('../../assets/images/lessons/LessonFirst.jpg') }
+                    source={ image_background_source }
                 >
                     <Tile>
                         <Overlay>
-                            <Text styleName="md-gutter-bottom">Lesson First</Text>
-                            <Text>On the End Of Man</Text>
+                            <Text styleName="md-gutter-bottom">{ lesson.title }</Text>
+                            <Text>{ lesson.subtitle }</Text>
                         </Overlay>
                     </Tile>
                 </ImageBackground>
                 {
-                  lessons.map((item, i) => (
+                  questions.map((item, i) => (
                     <Card key={item.number}>
                         <View key={item.number} style={styles.question_container}>
                             <Text style={styles.question} h4>{ item.question }</Text>
