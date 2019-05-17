@@ -36,7 +36,13 @@ export default class OneLessonScreen extends React.Component {
                 {
                   questions.map((item, i) => (
                     <Card key={item.number}>
-                        <Icon name='star-o' type='font-awesome' />
+                        <Icon
+                            name='star-o'
+                            type='font-awesome'
+                            onPress={() => {
+                                console.log("I pressed the star")
+                            }}
+                            />
                         <View key={item.number} style={styles.question_container}>
                             <Text style={styles.question} h4>{ item.question }</Text>
                             <Text style={styles.answer}>{ item.answer }</Text>
