@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { ListItem, Text, Card } from 'react-native-elements';
+import { ListItem, Text, Card, Icon } from 'react-native-elements';
 import { ImageBackground, Title, Overlay, Caption, Tile } from '@shoutem/ui';
 import { lessonImageSources } from '../../assets/images/lessons/sources';
 
@@ -36,6 +36,7 @@ export default class OneLessonScreen extends React.Component {
                 {
                   questions.map((item, i) => (
                     <Card key={item.number}>
+                        <Icon name='star-o' type='font-awesome' />
                         <View key={item.number} style={styles.question_container}>
                             <Text style={styles.question} h4>{ item.question }</Text>
                             <Text style={styles.answer}>{ item.answer }</Text>
